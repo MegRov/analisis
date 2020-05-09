@@ -12,7 +12,7 @@
     <div class="container container-fluid ">
         <div class="row vh-100  justify-content-center align-items-center  d-flex flex-wrap ">
 <!------------------------------------------------Card saludo----------------------------------->
-            <div class="card text-center card shadow-lg" id="saludo">        
+            <div class="card text-center card shadow-lg " id="saludo">        
                     <div class=" d-flex justify-content-center pt-2">
                         <img src="https://milasoft.co/wp-content/uploads/2020/01/icono-2.png" width="80" height="80" alt=""> 
                     </div>        
@@ -28,7 +28,7 @@
 
 
 <!----------------------------------------Card precios fijos---------------------------------------------------------------->
-            <div class="card text-center card shadow-lg" id="gastos-fijos">        
+            <div class="card text-center card shadow-lg col-lg-8" id="gastos-fijos">        
                 <div class=" d-flex justify-content-center pt-2">
                     <img src="https://milasoft.co/wp-content/uploads/2020/01/icono-2.png" width="40" height="40" alt=""> 
                   </div>        
@@ -65,12 +65,12 @@
                 </div>
               </div>
 <!----------------------------------------Card precios fijos---------------------------------------------------------------->
-            <div class="card text-center card shadow-lg" id="productos">        
+            <div class="card text-center card shadow-lg  col-lg-8" id="productos">        
                 <div class=" d-flex justify-content-center pt-2">
                     <img src="https://milasoft.co/wp-content/uploads/2020/01/icono-2.png" width="40" height="40" alt=""> 
                   </div>        
                 <div class="card-body">
-                  <h5 class="card-title">Intoduce tus productos o servicios</h5>
+                  <h5 class="card-title" id="productonum">Intoduce tus productos o servicios</h5>
                   <p class="card-text"></p>
                   <div class="container " id="producto1">
 
@@ -86,12 +86,13 @@
                             </div>
                             <input type="text" class="form-control" placeholder="precio unitario " aria-label="Dollar amount (with dot and two decimal places)" >
                         </div>
-                    <div class="input-group mb-3 shadow-lg">
-                            <div class="input-group-prepend">                                                        
+                     <div class="input-group mb-3 shadow-lg">
+                         <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
-                                <input type="text" class="form-control" placeholder="precio de venta" aria-label="Dollar amount (with dot and two decimal places)" >
                             </div>
-                     </div>
+                            <input type="text" class="form-control" placeholder="precio venta " aria-label="Dollar amount (with dot and two decimal places)" >
+                        </div>
+                   
                 </div>
                   <div class="container " id="producto2">
 
@@ -99,7 +100,7 @@
                           <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                            <input type="text" class="form-control" placeholder="producto 2" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
                      </div>
                      <div class="input-group mb-3 shadow-lg">
                          <div class="input-group-prepend">                                                        
@@ -107,20 +108,42 @@
                             </div>
                             <input type="text" class="form-control" placeholder="precio unitario " aria-label="Dollar amount (with dot and two decimal places)" >
                         </div>
-                    <div class="input-group mb-3 shadow-lg">
-                            <div class="input-group-prepend">                                                        
+                     <div class="input-group mb-3 shadow-lg">
+                         <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
-                                <input type="text" class="form-control" placeholder="precio de venta" aria-label="Dollar amount (with dot and two decimal places)" >
-                            </div>
-                     </div>
+                        </div>
+                            <input type="text" class="form-control" placeholder="precio venta " aria-label="Dollar amount (with dot and two decimal places)" >
+                    </div>
+                    
                 </div>
-                  <div class="container " id="producto2">
+                  <div class="container " id="producto3">
+
+                      <div class="input-group mb-3 shadow-lg">
+                           <div class="input-group-prepend">                                                        
+                                <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                            </div>
+                            <input type="text" class="form-control" placeholder="producto 3" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                     </div>
+                        <div class="input-group mb-3 shadow-lg">
+                            <div class="input-group-prepend">                                                        
+                                    <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                                </div>
+                                <input type="text" class="form-control" placeholder="precio unitario " aria-label="Dollar amount (with dot and two decimal places)" >
+                            </div>
+                        <div class="input-group mb-3 shadow-lg">
+                            <div class="input-group-prepend">                                                        
+                                   <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                           </div>
+                               <input type="text" class="form-control" placeholder="precio venta " aria-label="Dollar amount (with dot and two decimal places)" >
+                       </div>
+                </div>
+                  <div class="container " id="producto4">
 
                       <div class="input-group mb-3 shadow-lg">
                           <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                            <input type="text" class="form-control" placeholder="producto 4" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
                      </div>
                      <div class="input-group mb-3 shadow-lg">
                          <div class="input-group-prepend">                                                        
@@ -128,17 +151,20 @@
                             </div>
                             <input type="text" class="form-control" placeholder="precio unitario " aria-label="Dollar amount (with dot and two decimal places)" >
                         </div>
-                    <div class="input-group mb-3 shadow-lg">
+                        <div class="input-group mb-3 shadow-lg">
                             <div class="input-group-prepend">                                                        
-                                <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
-                                <input type="text" class="form-control" placeholder="precio de venta" aria-label="Dollar amount (with dot and two decimal places)" >
-                            </div>
-                     </div>
+                                   <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                           </div>
+                               <input type="text" class="form-control" placeholder="precio venta " aria-label="Dollar amount (with dot and two decimal places)" >
+                       </div>
                 </div>
                     
                    
                             <div class="container d-flex flex-row-reverse">
-                            <a href="" id="moreproducts">    <img src="plus.png"  width="25" height="25" ></a>
+                            <a id="moreproducts">    <img src="plus.png"  width="25" height="25" ></a>
+                            </div>
+                            <div class="container" id="mensajeproducto">
+
                             </div>
                     </div>
                 <div class=" text-muted  pb-2">
