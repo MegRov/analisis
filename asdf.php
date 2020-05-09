@@ -1,0 +1,1 @@
+<?php include ("vistas/vista1.php")?>

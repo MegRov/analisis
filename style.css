@@ -23,15 +23,42 @@ body{
 #gastos-fijos{
   display: none;
 }
-#productos{
-    display:none;
+
+/*********Products************/
+    #productos{
+        display:none;
+    }
+    #producto2{
+        display: none;
+    }
+    #producto3{
+        display: none;
+    }
+    #producto4{
+        display: none;
+    }
+
+#moreproducts:hover{
+    cursor: pointer;
 }
-#producto2{
+/********* Gastos fijos*************/
+    #morepreciosf:hover{
+        cursor: pointer;
+    }
+  #inputgastos2,#inputgastos3,#inputgastos4{
+    display: none;
+  }
+  #inputgastos3{
+    display: none;
+  }
+ #inputgastos4{
+    display: none;
+  }
+
+/*********End  Gastos fijos*************/
+/***********Estadisticas*****************/
+
+#estadisticas{
     display: none;
 }
-#producto3{
-    display: none;
-}
-#producto4{
-    display: none;
-}
+/***********End Estadisticas*****************/

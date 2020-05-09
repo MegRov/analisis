@@ -10,7 +10,10 @@
 <body>
 
     <div class="container container-fluid ">
-        <div class="row vh-100  justify-content-center align-items-center  d-flex flex-wrap ">
+        <div class="row vh-100   justify-content-center align-items-center  d-flex flex-wrap ">
+
+            
+            
 <!------------------------------------------------Card saludo----------------------------------->
             <div class="card text-center card shadow-lg " id="saludo">        
                     <div class=" d-flex justify-content-center pt-2">
@@ -20,16 +23,17 @@
                 <h5 class="card-title">Bienvenido </h5>
                 <p class="card-text">Software creado para que hagas las cuentas de tu negocio</p>
                 <a href="#" class="btn btn-degrade" id="ocultarsaludo" onclick="ocultarsaludo()">Hacer estudio</a> 
-                    
-                                
+                                 
                 </div>
             </div>
 
 
 
 <!----------------------------------------Card precios fijos---------------------------------------------------------------->
-            <div class="card text-center card shadow-lg col-lg-8" id="gastos-fijos">        
+            <div class="card text-center card shadow-lg col-lg-8" id="gastos-fijos">       
+                
                 <div class=" d-flex justify-content-center pt-2">
+                    
                     <img src="https://milasoft.co/wp-content/uploads/2020/01/icono-2.png" width="40" height="40" alt=""> 
                   </div>        
                 <div class="card-body">
@@ -41,38 +45,49 @@
                             </div>
                             <input type="text" class="form-control" placeholder="Ejemplo: nómina" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
                      </div>
-                    <div class="input-group mb-3 shadow-lg">
-                            <div class="input-group-prepend">                                                        
+                    <div class="input-group mb-3 shadow-lg " id="inputgastos2">
+                            <div class="input-group-prepend d-flex flex-row">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                                <input type="text" class="form-control w-100 " placeholder="Ejemplo: arriendo" aria-label="Dollar amount (with dot and two decimal places)"  >
                             </div>
-                            <input type="text" class="form-control" placeholder="Ejemplo: arriendo" aria-label="Dollar amount (with dot and two decimal places)"  >
-                     </div>
-                    <div class="input-group mb-3 shadow-lg">
-                            <div class="input-group-prepend">                                                        
+                     </div>                    
+                    <div class="input-group mb-3 shadow-lg  " id="inputgastos3">
+                            <div class="input-group-prepend d-flex flex-row">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                                <input type="text" class="form-control  w-100" placeholder="Ejemplo: nomina  " aria-label="Dollar amount (with dot and two decimal places)"  >
                             </div>
-                            <input type="text" class="form-control" placeholder="Ejemplo: servicios" aria-label="Dollar amount (with dot and two decimal places)"  >
+                     </div>                    
+                   
+                    <div class="input-group mb-3 shadow-lg " id="inputgastos4">
+                            <div class="input-group-prepend d-flex flex-row">                                                        
+                                <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                                <input type="text" class="form-control w-100 " placeholder="otros" aria-label="Dollar amount (with dot and two decimal places)"  >
+                            </div>
                      </div>
                     
                    
                             <div class="container d-flex flex-row-reverse">
-                                <img src="plus.png"  width="25" height="25" >
+                               <a id="morepreciosf" > <img src="plus.png"  width="25" height="25" ></a>
                             </div>
                     </div>
                 <div class=" text-muted  pb-2">
                     <a href="#" class="btn btn-primary" id="ocultargastos-fijos">Continuar estudio</a>    
                                   
                 </div>
+                
               </div>
-<!----------------------------------------Card precios fijos---------------------------------------------------------------->
-            <div class="card text-center card shadow-lg  col-lg-8" id="productos">        
+<!----------------------------------------Card gastos fijos---------------------------------------------------------------->
+            <div class="card text-center card shadow-lg  col-lg-8 vh-50" id="productos"> 
+                
+            
+               
                 <div class=" d-flex justify-content-center pt-2">
                     <img src="https://milasoft.co/wp-content/uploads/2020/01/icono-2.png" width="40" height="40" alt=""> 
                   </div>        
                 <div class="card-body">
                   <h5 class="card-title" id="productonum">Intoduce tus productos o servicios</h5>
                   <p class="card-text"></p>
-                  <div class="container " id="producto1">
+                  <div class="container  " id="producto1">
 
                       <div class="input-group mb-3 shadow-lg">
                           <div class="input-group-prepend">                                                        
@@ -155,24 +170,83 @@
                             <div class="input-group-prepend">                                                        
                                    <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                            </div>
-                               <input type="text" class="form-control" placeholder="precio venta " aria-label="Dollar amount (with dot and two decimal places)" >
-                       </div>
+                               <input type="text" class="form-control" placeholder="precio de venta " aria-label="Dollar amount (with dot and two decimal places)" >
+                       </div> 
                 </div>
                     
                    
                             <div class="container d-flex flex-row-reverse">
-                            <a id="moreproducts">    <img src="plus.png"  width="25" height="25" ></a>
+                            <a id="moreproducts"> <img src="plus.png"  width="25" height="25" ></a>
                             </div>
                             <div class="container" id="mensajeproducto">
 
                             </div>
                     </div>
                 <div class=" text-muted  pb-2">
-                    <a href="#" class="btn btn-primary">Continuar estudio</a>    
+                    <a id="verestadisticas" class="btn btn-primary">Ver estadisticas</a>    
 
                 </div>
               </div>
            <!-----------------------------------------End productos------------------------------------------------------------>
+           <!--------------------------------------------Estadisticas --------------------------------------------------------->
+           <div class="card text-center card shadow-lg col-lg-8" id="estadisticas">       
+                
+            <div class=" d-flex justify-content-center pt-2">
+                
+                <img src="https://milasoft.co/wp-content/uploads/2020/01/icono-2.png" width="40" height="40" alt=""> 
+              </div>        
+            <div class="card-body">
+              <h5 class="card-title">Las estadísticas para que tu negocio tenga rentabilidad</h5>
+              <p class="card-text">Gracias por hacer uso de nuestro poderoso software para </p>
+                <div class="container">
+                                    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div class="container bg-success h-auto d-inline-block">
+
+        <script type="text/javascript" >
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['U/n vendidas', 'costos', 'ventas'],
+          ['100',  100,      400],
+          ['400',  400,      600],
+          ['800',  800,       800],
+          ['1600',  1600,     900],
+          ['2000',  2000,      1000],
+        
+          
+        ]);
+        
+        var options = {
+          title: 'Costos vs ventas',
+          hAxis: {title: 'unidades vendidas',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+    </script>
+
+    <div id="chart_div" style="width: 100%; height: 500px;"></div>
+ 
+
+    </div>
+    
+                </div>          
+                
+               
+        
+                </div>
+            <div class=" text-muted  pb-2">
+                <a href="#" class="btn btn-primary" id="ocultargastos-fijos">Continuar estudio</a>    
+                              
+            </div>
+            
+          </div>
+           <!-------------------------------------------End Estadisticas --------------------------------------------------------->
       
         </div>
       </div>

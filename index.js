@@ -10,6 +10,11 @@ $(document).ready(function(){ //Cambiar vista de saludo a gastos fijos
         $("#gastos-fijos").hide(2000);
         $("#productos").show(2000);
     });
+    $('#verestadisticas').click(function(){//Cambiar vista de productos a estadisticas
+    
+        $("#productos").hide(2000);
+        $("#estadisticas").show(2000);
+    });
     $('#moreproducts').click(function(){//Añadir productos
 
     
@@ -40,5 +45,24 @@ $(document).ready(function(){ //Cambiar vista de saludo a gastos fijos
         
 
     });
+    $('#morepreciosf').click(function(){//Añadir inputs gastos fijos        
+        $("#inputgastos2").css('display','block');            
+            $('#morepreciosf').click(function(){
+                $("#inputgastos3").css('display','block');              
+                    
+                    $('#morepreciosf').click(function(){
+                        $("#inputgastos4").css('display','block');                    
+                        
+                        
+                        
+                            });
+                    });
+        
+
+    });
+   
+
+
+
 });
 
