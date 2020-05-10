@@ -4,6 +4,8 @@ $(document).ready(function(){
 
         $("#saludo").hide(2000);
         $("#gastos-fijos").show(2000);
+        $('#tooltip').tooltip('show')
+        
     });
     $('#ocultargastos-fijos').click(function(){//Cambiar vista de gastos fijos a productos
     
@@ -66,9 +68,13 @@ $(document).ready(function(){
 
 
 });
+$(function () {//mantiene activos los tooltips
+    $('[data-toggle="tooltip"]').tooltip()
+    
+  })
 function workname(){//Guarda el nombre en variable
-    var wname =document.getElementById("workname").value;
-    console.log(wname);
+    var workname =document.getElementById("workname").value;
+    console.log(workname);
 
 }
 
@@ -76,6 +82,7 @@ function workname(){//Guarda el nombre en variable
 
 
 function getdata(){ //obtiene los datos de los gastos y los suma
+    
     var inputgastos1 = document.getElementById("inputgasto1").value;
     var inputgastos2 = document.getElementById("inputgasto2").value;
     var inputgastos3 = document.getElementById("inputgasto3").value;
