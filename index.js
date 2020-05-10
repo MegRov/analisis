@@ -89,7 +89,7 @@ function getdata(){ //obtiene los datos de los gastos y los suma
     var inputgastos2 = document.getElementById("inputgasto2").value;
     var inputgastos3 = document.getElementById("inputgasto3").value;
     var inputgastos4 = document.getElementById("inputgasto4").value;
-    var resultgastos =  console.log(Number(inputgastos1)+Number (inputgastos2)+Number (inputgastos3)+Number (inputgastos4));
+     resultgastos = (Number(inputgastos1)+Number (inputgastos2)+Number (inputgastos3)+Number (inputgastos4));
 
 }
 
@@ -107,7 +107,8 @@ function product(){
     var name2 = document.getElementById("productname4").value;//nombre product4
     var pund2 = document.getElementById("preciou4").value;//precio und
     var pven2 = document.getElementById("preciov4").value;//precio venta
-    var names = console.log(name1+name2+name3+name4);
+    var pe1 = (Number (resultgastos) /(Number(pven1)-Number(pund1)) );
+    document.getElementById("puntoe").innerHTML= pe1;
 
    
 }
