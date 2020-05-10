@@ -1,6 +1,6 @@
-$(document).ready(function(){ //Cambiar vista de saludo a gastos fijos
+$(document).ready(function(){ 
 
-    $('#ocultarsaludo').click(function(){
+    $('#ocultarsaludo').click(function(){//Cambiar vista de saludo a gastos fijos
 
         $("#saludo").hide(2000);
         $("#gastos-fijos").show(2000);
@@ -37,14 +37,15 @@ $(document).ready(function(){ //Cambiar vista de saludo a gastos fijos
                         $("#producto3").hide(21334);
                         $("#producto4").show(2000);
                         $("#moreproducts").hide(2342);
+        
                         
                         
                         
                             });
                     });
-        
+                   
 
-    });
+    });//fin añadir productos
     $('#morepreciosf').click(function(){//Añadir inputs gastos fijos        
         $("#inputgastos2").css('display','block');            
             $('#morepreciosf').click(function(){
@@ -65,4 +66,20 @@ $(document).ready(function(){ //Cambiar vista de saludo a gastos fijos
 
 
 });
+function workname(){//Guarda el nombre en variable
+    var wname =document.getElementById("workname").value;
+    console.log(wname);
 
+}
+
+
+
+
+function getdata(){ //obtiene los datos de los gastos y los suma
+    var inputgastos1 = document.getElementById("inputgasto1").value;
+    var inputgastos2 = document.getElementById("inputgasto2").value;
+    var inputgastos3 = document.getElementById("inputgasto3").value;
+    var inputgastos4 = document.getElementById("inputgasto4").value;
+    var reultgastos =  console.log(Number(inputgastos1)+Number (inputgastos2)+Number (inputgastos3)+Number (inputgastos4));
+
+}
