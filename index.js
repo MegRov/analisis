@@ -4,13 +4,14 @@ $(document).ready(function(){
 
         $("#saludo").hide(2000);
         $("#gastos-fijos").show(2000);
-        $('#tooltip').tooltip('show')
+        $('#tooltip').tooltip('show');
         
     });
     $('#ocultargastos-fijos').click(function(){//Cambiar vista de gastos fijos a productos
-    
+        
         $("#gastos-fijos").hide(2000);
         $("#productos").show(2000);
+        $('#tooltip').tooltip('hide');
     });
     $('#verestadisticas').click(function(){//Cambiar vista de productos a estadisticas
     
