@@ -76,6 +76,7 @@ $(function () {//mantiene activos los tooltips
 function workname(){//Guarda el nombre en variable
     var workname =document.getElementById("workname").value;
     console.log(workname);
+    document.getElementById("work-name").innerHTML = workname;//Imprimir el nombre en el formilario estadisicas
 
 }
 
@@ -88,6 +89,20 @@ function getdata(){ //obtiene los datos de los gastos y los suma
     var inputgastos2 = document.getElementById("inputgasto2").value;
     var inputgastos3 = document.getElementById("inputgasto3").value;
     var inputgastos4 = document.getElementById("inputgasto4").value;
-    var reultgastos =  console.log(Number(inputgastos1)+Number (inputgastos2)+Number (inputgastos3)+Number (inputgastos4));
+    var resultgastos =  console.log(Number(inputgastos1)+Number (inputgastos2)+Number (inputgastos3)+Number (inputgastos4));
 
 }
+
+function product(){
+    
+    var name1 = document.getElementById("productname1").value;
+    var name2 = document.getElementById("productname2").value;
+    var name3 = document.getElementById("productname3").value;
+    var name4 = document.getElementById("productname4").value;
+    var names = console.log(name1+name2+name3+name4);
+
+    function estadisticas(){
+       
+    }
+}
+

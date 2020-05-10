@@ -94,19 +94,19 @@
 
                       <div class="input-group mb-3 shadow-lg">
                           <div class="input-group-prepend">                                                        
-                                <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                                <span class="input-group-text"><img src="product.svg"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="Nombre del producto" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                            <input type="text" class="form-control"  id="productname1" placeholder="Nombre del producto" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
                      </div>
                      <div class="input-group mb-3 shadow-lg">
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="precio unitario " aria-label="Dollar amount (with dot and two decimal places)" >
+                            <input type="text" class="form-control" placeholder="precio unitario "  aria-label="Dollar amount (with dot and two decimal places)" >
                         </div>
                      <div class="input-group mb-3 shadow-lg">
                          <div class="input-group-prepend">                                                        
-                                <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                                <span class="input-group-text"><img  src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
                             <input type="text" class="form-control" placeholder="precio venta " aria-label="Dollar amount (with dot and two decimal places)" >
                         </div>
@@ -116,9 +116,9 @@
 
                       <div class="input-group mb-3 shadow-lg">
                           <div class="input-group-prepend">                                                        
-                                <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                                <span class="input-group-text"><img src="product.svg"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="producto 2" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                            <input type="text" class="form-control"  id="productname2" placeholder="producto 2" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
                      </div>
                      <div class="input-group mb-3 shadow-lg">
                          <div class="input-group-prepend">                                                        
@@ -138,9 +138,9 @@
 
                       <div class="input-group mb-3 shadow-lg">
                            <div class="input-group-prepend">                                                        
-                                <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                                <span class="input-group-text"><img src="product.svg"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="producto 3" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                            <input type="text" class="form-control"  id="productname3" placeholder="producto 3" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
                      </div>
                         <div class="input-group mb-3 shadow-lg">
                             <div class="input-group-prepend">                                                        
@@ -159,9 +159,9 @@
 
                       <div class="input-group mb-3 shadow-lg">
                           <div class="input-group-prepend">                                                        
-                                <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                                <span class="input-group-text"><img src="product.svg"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="producto 4" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                            <input type="text" class="form-control"  id="productname4" placeholder="producto 4" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
                      </div>
                      <div class="input-group mb-3 shadow-lg">
                          <div class="input-group-prepend">                                                        
@@ -186,7 +186,7 @@
                             </div>
                     </div>
                 <div class=" text-muted  pb-2">
-                    <a id="verestadisticas" class="btn btn-primary">Ver estadisticas</a>    
+                    <a id="verestadisticas" onclick="product()" class="btn btn-primary">Ver estadisticas</a>    
 
                 </div>
               </div>
@@ -199,12 +199,11 @@
                     <img src="https://milasoft.co/wp-content/uploads/2020/01/icono-2.png" width="40" height="40" alt=""> 
                 </div>        
                 <div class="card-body">
-                    <h5 class="card-title">Las estadísticas para que tu negocio tenga rentabilidad</h5>
-                    <p class="card-text">Gracias por hacer uso de nuestro poderoso software para </p>
+                    <h5 class="card-title"> <strong id="work-name"></strong></h5>
+                    <p class="card-text">necesitas vender <a class="alert alert-success"  id="result"></a> productos para obtener ganancias </p>
                         <div class="container">
                                                             
-                            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
+                            
                           
             
                     </div>          
