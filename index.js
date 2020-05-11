@@ -94,21 +94,25 @@ function getdata(){ //obtiene los datos de los gastos y los suma
 }
 
 function product(){
-    
+    /*********Almacenar en variable lo que viene del input**************/    
     var name1 = document.getElementById("productname1").value;//nombre product1
     var pund1 = document.getElementById("preciou1").value;//precio und
     var pven1 = document.getElementById("preciov1").value;//precio venta
     var name2 = document.getElementById("productname2").value;//nombre product2
     var pund2 = document.getElementById("preciou2").value;//precio und
     var pven2 = document.getElementById("preciov2").value;//precio venta
-    var name2 = document.getElementById("productname3").value;//nombre product3
-    var pund2 = document.getElementById("preciou3").value;//precio und
-    var pven2 = document.getElementById("preciov3").value;//precio venta
-    var name2 = document.getElementById("productname4").value;//nombre product4
-    var pund2 = document.getElementById("preciou4").value;//precio und
-    var pven2 = document.getElementById("preciov4").value;//precio venta
-    var pe1 = (Number (resultgastos) /(Number(pven1)-Number(pund1)) );
-    document.getElementById("puntoe").innerHTML= pe1;
+    var name3 = document.getElementById("productname3").value;//nombre product3
+    var pund3 = document.getElementById("preciou3").value;//precio und
+    var pven3 = document.getElementById("preciov3").value;//precio venta
+    var name4 = document.getElementById("productname4").value;//nombre product4
+    var pund4 = document.getElementById("preciou4").value;//precio und
+    var pven4 = document.getElementById("preciov4").value;//precio venta
+   /******** Punto de equilibrio de los productos *************/
+    var pe1 = (Number (resultgastos) /(Number(pven1)-Number(pund1)));
+    var pe2 = (Number (resultgastos) /(Number(pven2)-Number(pund2)));
+    var pe3 = (Number (resultgastos) /(Number(pven3)-Number(pund3)));
+    var pe4 = (Number (resultgastos) /(Number(pven4)-Number(pund4)));
+    document.getElementById("puntoe").innerHTML= pe1;//imprime el punto de equilibrio
 
    
 }

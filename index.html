@@ -199,35 +199,59 @@
                     <img src="https://milasoft.co/wp-content/uploads/2020/01/icono-2.png" width="40" height="40" alt=""> 
                 </div>        
                 <div class="card-body">
-                    <h5 class="card-title"><strong id="work-name"></strong></h5>
-                    <p class="card-text">necesitas vender <a class="alert alert-success"  id="result"></a> productos para obtener ganancias </p>
-                        <div class="container">
-                            <div class="row col-lg-12 ">Calculo del producto =</div>
-                            <table class="table table-striped">
-                                <thead>
+                    <h5 class="card-title"><strong id="work-name"></strong></h5>                    
+                        <div class="container">                      
+                            <div class="input-group mb-3 shadow-lg"><!--input cantidad ventas-->
+                                <div class="input-group-prepend">                                                        
+                                       <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                               </div>
+                                   <input type="text" class="form-control" placeholder="Cuantos productos te gustaría vender" id="preciov4" aria-label="Dollar amount (with dot and two decimal places)" >
+                           </div> 
+                   
+
+                            <table class="table table-striped rounded">
+                                <thead class="thead-dark">
+                                    <th colspan="4">Estudio de precios</th>
+                                </thead>
+                                <thead class="thead-light">
                                   <tr>
-                                    <th scope="col">Punto de Equlibrio</th>
-                                    <th scope="col">First</th>
-                                    
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">PE</th>
+                                    <th scope="col">costos</th>
+                                    <th scope="col">utilidad</th>                               
                                   </tr>
                                 </thead>
-                                <tbody>
+                                <tbody>                                                                        
                                   <tr>
-                                    <th id="puntoe">dfgsdfg</th>
-                                    <td>Mark</td>
+                                    <th>nombre1</th>
+                                    <th>punto1</th>
+                                    <td>costo1</td>
+                                    <td>utilidad1</td>                                    
+                            
+                                </tr>
+                                <tr>
+                                    <th>nombre2</th>
+                                    <td>punto2</td>
+                                    <td>costo2</td>
+                                    <td>utilidad2</td>
                                     
-                                  </tr>
+                                </tr>
                                   <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
+                                    <td>nombre3</td>
+                                    <td>punto3</td>
+                                    <td>costo3</td>
+                                    <td>utilidad3</td>
                                     
                                   </tr>
                                 </tbody>
+                                <thead class="thead-light">
+                                    <tr>
+                                      <th scope="col">Total</th>
+                                      <th scope="col">PE</th>
+                                      <th scope="col">costos</th>
+                                      <th scope="col">utilidad</th>                               
+                                    </tr>
+                                  </thead>
                               </table>
                                                             
                             
@@ -238,11 +262,6 @@
                 
             
                 </div>
-                <div class=" text-muted  pb-2">
-                    <a href="#" class="btn btn-primary" id="ocultargastos-fijos">Continuar estudio</a>    
-                              
-                </div>
-            
         </div>
            <!-------------------------------------------End Estadisticas --------------------------------------------------------->
       
