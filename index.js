@@ -106,26 +106,56 @@ function product(){
     var name4 = document.getElementById("productname4").value;//nombre product4
     var pund4 = document.getElementById("preciou4").value;//precio und
     var pven4 = document.getElementById("preciov4").value;//precio venta
-   /******** Imprimir punto de equilibrio de los productos *************/
+    var ventas = document.getElementById("ventas").value;//cantidad de ventas
+   /******** Calcular punto de equilibrio *************/
    var pe1 = (Number (resultgastos) /(Number(pven1)-Number(pund1)));
    var pe2 = (Number (resultgastos) /(Number(pven2)-Number(pund2)));
    var pe3 = (Number (resultgastos) /(Number(pven3)-Number(pund3)));
    var pe4 = (Number (resultgastos) /(Number(pven4)-Number(pund4)));
+   /******** Calcular costo de los productos *************/
+   var cos1 = ((Number(resultgastos)+Number(pund1))*Number(ventas));
+   var cos2 = ((Number(resultgastos)+Number(pund2))*Number(ventas));
+   var cos3 = ((Number(resultgastos)+Number(pund3))*Number(ventas));
+   var cos4 = ((Number(resultgastos)+Number(pund4))*Number(ventas));
    
-   /***************Validacion inputs productos********************/
+   /******** Calcular ventas *************/
+
+   var vent1 = (Number(pven1)-Number(ventas));
+   var vent2 = (Number(pven2)-Number(ventas));
+   var vent3 = (Number(pven3)-Number(ventas));
+   var vent4 = (Number(pven4)-Number(ventas));
+   /******** Calcular utilidad de los productos *************/
+   var cos1 = (Number(cos1)-Number(vent1));
+   var cos2 = (Number(cos2)-Number(vent2));
+   var cos3 = (Number(cos3)-Number(vent3));
+   var cos4 = (Number(cos4)-Number(vent4));
+   
+
+
+   
+   /***************Validacion inputs productos y musetra en la tabla********************/
    document.getElementById("name1").innerHTML= name1;//nombre1 
+   document.getElementById("pe1").innerHTML=pe1;//imprime punto equilibrio 1
+   document.getElementById("cos1").innerHTML=cos1;//imprime costos 1
+
    if (name2.length != 0) {//si esta vacio el input 2 lo oculta en la tabla, igual los que le siguen
     $('#product2').show(1);
     document.getElementById("name2").innerHTML= name2;//nombre2
-       
-    }
-    if (name3.length != 0) {
-        $('#product3').show(1);
-        document.getElementById("name3").innerHTML= name3;//nombre3
-    }
-    if (name4.length != 0) {
-        $('#product4').show(1);
-        document.getElementById("name4").innerHTML= name4;//nombre4
+    document.getElementById("pe2").innerHTML=pe2;//imprime punto equilibrio 2
+    document.getElementById("cos2").innerHTML=cos2;//imprime costos 2
+    
+}
+if (name3.length != 0) {
+    $('#product3').show(1);
+    document.getElementById("name3").innerHTML= name3;//nombre3
+    document.getElementById("pe3").innerHTML=pe3;//imprime punto equilibrio 3
+    document.getElementById("cos3").innerHTML=cos3;//imprime costos 3
+}
+if (name4.length != 0) {
+    $('#product4').show(1);
+    document.getElementById("name4").innerHTML= name4;//nombre 4
+    document.getElementById("pe4").innerHTML=pe4;//imprime punto equilibrio 4
+    document.getElementById("cos4").innerHTML=cos4;//imprime costos 4
     }
       
     /*****************Imprimir nombres*********************/
