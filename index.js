@@ -75,7 +75,6 @@ $(function () {//mantiene activos los tooltips
   })
 function workname(){//Guarda el nombre en variable
     var workname =document.getElementById("workname").value;
-    console.log(workname);
     document.getElementById("work-name").innerHTML = workname;//Imprimir el nombre en el formulario estadisicas
 
 }
@@ -89,7 +88,7 @@ function getdata(){ //obtiene los datos de los gastos y los suma
     var inputgastos2 = document.getElementById("inputgasto2").value;
     var inputgastos3 = document.getElementById("inputgasto3").value;
     var inputgastos4 = document.getElementById("inputgasto4").value;
-     resultgastos = (Number(inputgastos1)+Number (inputgastos2)+Number (inputgastos3)+Number (inputgastos4));
+    resultgastos = (Number(inputgastos1)+Number (inputgastos2)+Number (inputgastos3)+Number (inputgastos4));
 
 }
 
@@ -108,29 +107,28 @@ function product(){
     var pund4 = document.getElementById("preciou4").value;//precio und
     var pven4 = document.getElementById("preciov4").value;//precio venta
    /******** Imprimir punto de equilibrio de los productos *************/
-    var pe1 = (Number (resultgastos) /(Number(pven1)-Number(pund1)));
-    var pe2 = (Number (resultgastos) /(Number(pven2)-Number(pund2)));
-    var pe3 = (Number (resultgastos) /(Number(pven3)-Number(pund3)));
-    var pe4 = (Number (resultgastos) /(Number(pven4)-Number(pund4)));
-    document.getElementById("noombe").innerHTML=(typeof pven4);//imprime el punto de equilibrio
-    /*****************Imprimir nombres*********************/
-
-    /***************Validacion inputs productos********************/
-    if (name2.length == 0) {//si esta vacio el input 2 lo oculta en la tabla, igual los que le siguen
-        $('#product2').hide(234);
-        $('#product3').hide(234);
-        $('#product4').hide(234);
-    }else if (name3.length == 0) {
-        $('#product3').hide(234);
-        $('#product4').hide(234);
-    }else if (name4.length == 0) {
-        $('#product4').hide(234);
-    }
-    
-
-    
-  
-
+   var pe1 = (Number (resultgastos) /(Number(pven1)-Number(pund1)));
+   var pe2 = (Number (resultgastos) /(Number(pven2)-Number(pund2)));
+   var pe3 = (Number (resultgastos) /(Number(pven3)-Number(pund3)));
+   var pe4 = (Number (resultgastos) /(Number(pven4)-Number(pund4)));
    
+   /***************Validacion inputs productos********************/
+   document.getElementById("name1").innerHTML= name1;//nombre1 
+   if (name2.length != 0) {//si esta vacio el input 2 lo oculta en la tabla, igual los que le siguen
+    $('#product2').show(1);
+    document.getElementById("name2").innerHTML= name2;//nombre2
+       
+    }
+    if (name3.length != 0) {
+        $('#product3').show(1);
+        document.getElementById("name3").innerHTML= name3;//nombre3
+    }
+    if (name4.length != 0) {
+        $('#product4').show(1);
+        document.getElementById("name4").innerHTML= name4;//nombre4
+    }
+      
+    /*****************Imprimir nombres*********************/
+    
 }
 
