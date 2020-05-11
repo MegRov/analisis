@@ -107,12 +107,29 @@ function product(){
     var name4 = document.getElementById("productname4").value;//nombre product4
     var pund4 = document.getElementById("preciou4").value;//precio und
     var pven4 = document.getElementById("preciov4").value;//precio venta
-   /******** Punto de equilibrio de los productos *************/
+   /******** Imprimir punto de equilibrio de los productos *************/
     var pe1 = (Number (resultgastos) /(Number(pven1)-Number(pund1)));
     var pe2 = (Number (resultgastos) /(Number(pven2)-Number(pund2)));
     var pe3 = (Number (resultgastos) /(Number(pven3)-Number(pund3)));
     var pe4 = (Number (resultgastos) /(Number(pven4)-Number(pund4)));
-    document.getElementById("puntoe").innerHTML= pe1;//imprime el punto de equilibrio
+    document.getElementById("noombe").innerHTML=(typeof pven4);//imprime el punto de equilibrio
+    /*****************Imprimir nombres*********************/
+
+    /***************Validacion inputs productos********************/
+    if (name2.length == 0) {//si esta vacio el input 2 lo oculta en la tabla, igual los que le siguen
+        $('#product2').hide(234);
+        $('#product3').hide(234);
+        $('#product4').hide(234);
+    }else if (name3.length == 0) {
+        $('#product3').hide(234);
+        $('#product4').hide(234);
+    }else if (name4.length == 0) {
+        $('#product4').hide(234);
+    }
+    
+
+    
+  
 
    
 }
