@@ -206,6 +206,7 @@
                                        <span class="input-group-text" id="tooltipventas" data-toggle="tooltip" data-placement="top" title="Introduce para ver las ganancias"><img src="finanzas.png"  width="20" height="20" ></span>                            
                                </div>
                                    <input type="text" class="form-control" placeholder="Cuantos productos te gustaría vender" id="ventas" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                                   <a type="button" class="btn btn-success" id="calcular" onclick="product()"> calcular</a>
                            </div> 
                    
 
@@ -216,7 +217,7 @@
                                 <thead class="thead-light">
                                   <tr >
                                     <th scope="col">Producto</th>
-                                    <th scope="col">PE</th>
+                                    <th scope="col" data-toggle="tooltip" data-placement="top" title="Cantidad para recuperar la inversion">PE</th>
                                     <th scope="col">costos</th>
                                     <th scope="col">utilidad</th>                               
                                   </tr>
@@ -251,7 +252,7 @@
                                   </tr>
                                 </tbody>
                                 <thead class="thead-light">
-                                    <tr>
+                                    <tr id="calcular">
                                       <th id="total">Total</th>
                                       <th id="totalpe">PE</th>
                                       <th id="totalcost">costos</th>

@@ -107,71 +107,103 @@ function product(){
     var name4 = document.getElementById("productname4").value;//nombre product4
     var pund4 = document.getElementById("preciou4").value;//precio und
     var pven4 = document.getElementById("preciov4").value;//precio venta
-    var ventas = document.getElementById("ventas").value;//cantidad de ventas
+    ventas = document.getElementById("ventas").value;//cantidad de ventas
+
+    if (name2.length === 0) {//si no hay nada todo es igual a 0
+        pven2=0;
+        pund2=0;
+        utld2=0;        
+    }
+    if (name3.length === 0) {
+        pven3=0;
+        pund3=0;
+        utld3=0;        
+    }
+    if (name4.length === 0) {
+        pven4=0;
+        pund4=0;
+        utld4=0;        
+    }
+    if (ventas ===0 ){
+        ventas=0;
+    }
+    
+
+ 
    /******** Calcular punto de equilibrio *************/
-   var pe1 = (Number (resultgastos) /(Number(pven1)-Number(pund1)));
-   var pe2 = (Number (resultgastos) /(Number(pven2)-Number(pund2)));
-   var pe3 = (Number (resultgastos) /(Number(pven3)-Number(pund3)));
-   var pe4 = (Number (resultgastos) /(Number(pven4)-Number(pund4)));
-   var totalpe= (Number(pe1)+Number(pe2)+Number(pe3)+Number(pe4));
+  var pe1 = (Number (resultgastos) /(Number(pven1)-Number(pund1)));
+  var pe2 = (Number (resultgastos) /(Number(pven2)-Number(pund2)));               //bien
+  var pe3 = (Number (resultgastos) /(Number(pven3)-Number(pund3)));
+  var pe4 = (Number (resultgastos) /(Number(pven4)-Number(pund4)));
+  
+  /******** Calcular costo de los productos *************/
+  var cos1 = (Number(resultgastos)+Number(pund1)*Number(ventas));
+  var cos2 = (Number(resultgastos)+Number(pund2)*Number(ventas));
+  var cos3 = (Number(resultgastos)+Number(pund3)*Number(ventas));                  //bien
+  var cos4 = (Number(resultgastos)+Number(pund4)*Number(ventas));
+ 
+  /******** Calcular ventas *************/
+  var vent1 = (Number(pven1)*Number(ventas));                                   
+  var vent2 = (Number(pven2)*Number(ventas));
+  var vent3 = (Number(pven3)*Number(ventas));                                       //bien
+  var vent4 = (Number(pven4)*Number(ventas));
+  /******** Calcular utilidad de los productos *************/
+  var utilidad1 = (Number(vent1)-Number(cos1));
+  var utilidad2 = (Number(vent2)-Number(cos2));                                     //bien
+  var utilidad3 = (Number(vent3)-Number(cos3));
+  var utilidad4 = (Number(vent4)-Number(cos4));
 
-   /******** Calcular costo de los productos *************/
-   var cos1 = ((Number(resultgastos)+Number(pund1))*Number(ventas));
-   var cos2 = ((Number(resultgastos)+Number(pund2))*Number(ventas));
-   var cos3 = ((Number(resultgastos)+Number(pund3))*Number(ventas));
-   var cos4 = ((Number(resultgastos)+Number(pund4))*Number(ventas));
-   var totalcost = (Number(cos1)+Number(cos2)+Number(cos3)+Number(cos4));
-   
-   /******** Calcular ventas *************/
-   var vent1 = (Number(pven1)-Number(ventas));
-   var vent2 = (Number(pven2)-Number(ventas));
-   var vent3 = (Number(pven3)-Number(ventas));
-   var vent4 = (Number(pven4)-Number(ventas));
-   var totalvent = (Number(vent1)+Number(vent2)+Number(vent3)+Number(vent4));
-   /******** Calcular utilidad de los productos *************/
-   var utilidad1 = (Number(cos1)-Number(vent1));
-   var utilidad2 = (Number(cos2)-Number(vent2));
-   var utilidad3 = (Number(cos3)-Number(vent3));
-   var utilidad4 = (Number(cos4)-Number(vent4));
-   var totalutld = (Number(utilidad1)+Number(utilidad2)+Number(utilidad3)+Number(utilidad4));
-   
+/***************Calcular totales **********************/
+  
+var totalpe= ((Number(pe1)+Number(pe2)+Number(pe3)+Number(pe4))/4);//total punto de equilibrio
+var totalutld = (Number(utilidad1)+Number(utilidad2)+Number(utilidad3)+Number(utilidad4));//total utilidades
+var totalvent = (Number(vent1)+Number(vent2)+Number(vent3)+Number(vent4));//total ventas
+var totalcost = (Number(cos1)+Number(cos2)+Number(cos3)+Number(cos4));//total costos
 
+   
 
    
    /***************Validacion inputs productos y musetra en la tabla********************/
-   document.getElementById("name1").innerHTML= name1;//nombre1 
-   document.getElementById("pe1").innerHTML=pe1;//imprime punto equilibrio 1
-   document.getElementById("cos1").innerHTML=cos1;//imprime costos 1
-   document.getElementById("utld1").innerHTML=utilidad1;//imprime la utilidad
-   document.getElementById("totalpe").innerHTML=totalpe;
-   document.getElementById("totalcost").innerHTML=totalcost;
-   document.getElementById("totalutl").innerHTML=totalutld;
-
+   document.getElementById("name1").innerHTML= name1;//imprime nombre1  en la tabla 
+   document.getElementById("pe1").innerHTML=pe1.toFixed();//imprime punto equilibrio 1 en la tabla
+   document.getElementById("cos1").innerHTML=cos1.toFixed();//imprime costos 1 en la tabla
+   
    
    if (name2.length != 0) {//si esta vacio el input 2 lo oculta en la tabla, igual los que le siguen
     $('#product2').show(1);
     document.getElementById("name2").innerHTML= name2;//nombre2
-    document.getElementById("pe2").innerHTML=pe2;//imprime punto equilibrio 2
+    document.getElementById("pe2").innerHTML=pe2.toFixed();//imprime punto equilibrio 2
     document.getElementById("cos2").innerHTML=cos2;//imprime costos 2
-    document.getElementById("utld2").innerHTML=utilidad2;//imprime la utilidad
     
 }
 if (name3.length != 0) {
     $('#product3').show(1);
     document.getElementById("name3").innerHTML= name3;//nombre3
-    document.getElementById("pe3").innerHTML=pe3;//imprime punto equilibrio 3
+    document.getElementById("pe3").innerHTML=pe3.toFixed();//imprime punto equilibrio 3
     document.getElementById("cos3").innerHTML=cos3;//imprime costos 3
-    document.getElementById("utld3").innerHTML=utilidad3;//imprime la utilidad
 }
 if (name4.length != 0) {
     $('#product4').show(1);
     document.getElementById("name4").innerHTML= name4;//nombre 4
-    document.getElementById("pe4").innerHTML=pe4;//imprime punto equilibrio 4
+    document.getElementById("pe4").innerHTML=pe4.toFixed();//imprime punto equilibrio 4
     document.getElementById("cos4").innerHTML=cos4;//imprime costos 4
-    document.getElementById("utld4").innerHTML=resultgastos;//imprime la utilidad
+    document.getElementById("utld4").innerHTML=utilidad4;//imprime la utilidad
+}
+  
+
+   
+$('#calcular').click(function(){
+    $('.calcular').show(123);
+    
+    
+    document.getElementById("utld1").innerHTML=utilidad1;//imprime la utilidad
+    document.getElementById("utld2").innerHTML=utilidad2;//imprime la utilidad
+    document.getElementById("utld3").innerHTML=utilidad3;//imprime la utilidad
+    document.getElementById("totalpe").innerHTML=totalpe;
+    document.getElementById("totalcost").innerHTML=totalcost;
+    document.getElementById("totalutl").innerHTML=totalutld;    
+});
+
 }
 
-    /*****************Imprimir nombres*********************/
-    
-}
 
