@@ -1,5 +1,7 @@
 $(document).ready(function(){ 
 
+    /***********redireccionamiento botones "siguiente" **************/
+
     $('#ocultarsaludo').click(function(){//Cambiar vista de saludo a gastos fijos
 
         $("#saludo").hide(2000);
@@ -20,7 +22,7 @@ $(document).ready(function(){
         $('#tooltipventas').tooltip('show');
     });
     $('#moreproducts').click(function(){//Añadir productos
-
+        
     
         $("#producto1").hide(21334);
         $("#producto2").show(2000);
@@ -34,7 +36,7 @@ $(document).ready(function(){
                 $("#producto3").show(2000);
                 
                     
-                    $('#moreproducts').click(function(){
+                $('#moreproducts').click(function(){
                         $("#productonum").hide(2000);                
                         $("#productonum").html('Añade tu producto 4');
                         $("#productonum").show(2000);
@@ -45,13 +47,14 @@ $(document).ready(function(){
                         
                         
                         
-                            });
                     });
-                   
-
-    });//fin añadir productos
-    $('#morepreciosf').click(function(){//Añadir inputs gastos fijos        
-        $("#inputgastos2").css('display','block');            
+                });
+                
+                
+            });//fin añadir productos
+            $('#morepreciosf').click(function(){//Añadir inputs gastos fijos        
+                $("#inputgastos2").css('display','block');            
+                $('#tooltip').tooltip('hide');
             $('#morepreciosf').click(function(){
                 $("#inputgastos3").css('display','block');              
                     
@@ -65,7 +68,28 @@ $(document).ready(function(){
         
 
     });
-   
+
+    /***********Redireccionamiento cotones regresar *********************/
+    $('#rsaludo').click(function(){//Cambiar vista de gastos fijos a saludo
+
+        $("#gastos-fijos").hide(2000);
+        $("#saludo").show(2000);
+        $('#tooltip').tooltip('hide');
+        
+    });
+    $('#rgastos-fijos').click(function(){//Cambiar vista de productos a gastos fijos
+        
+        $("#productos").hide(2000);
+        $("#gastos-fijos").show(2000);
+        $('#tooltip').tooltip('show');
+    });
+    $('#rproducts').click(function(){//Cambiar vista de  estadisticas a productos 
+        
+        $("#productos").show(2000);
+        $("#estadisticas").hide(2000);
+        $('#tooltipventas').tooltip('hide');
+    });  
+           
 
 
 
@@ -213,14 +237,19 @@ if (name4.length != 0) {
 
    
 $('#calcular').click(function(){
-
+    $('#tooltipventas').tooltip('hide');
     $('.calcular').show(123);
     document.getElementById("utld1").innerHTML=utilidad1;//imprime la utilidad
     document.getElementById("utld2").innerHTML=utilidad2;//imprime la utilidad
     document.getElementById("utld3").innerHTML=utilidad3;//imprime la utilidad
     document.getElementById("totalpe").innerHTML=totalpe.toFixed();
     document.getElementById("totalcost").innerHTML=totalcost;
-    document.getElementById("totalutl").innerHTML=totalutld;    
+    document.getElementById("totalutl").innerHTML=totalutld;   
+        $('#calcular').click(function(){
+            $('#tooltippe').tooltip('show');
+
+            
+    });
 });
 
 }

@@ -70,11 +70,18 @@
                     
                    
                             <div class="container d-flex flex-row-reverse">
-                               <a id="morepreciosf" > <img src="plus.png"  width="25" height="25" ></a>
+                               <a id="morepreciosf" data-toggle="tooltip" data-placement="top" title="añadir más gastos" > <img src="plus.png"  width="30" height="30" ></a>
                             </div>
                     </div>
-                <div class=" text-muted  pb-2">
-                    <a href="#" class="btn btn-primary" id="ocultargastos-fijos" onclick="getdata()">Continuar estudio</a>    
+                <div class=" text-muted d-flex justify-content-star pb-2">
+                    <div class="col-lg-4 d-flex justify-content-star ">
+
+                        <a href="#" id="rsaludo" class="btn btn-outline-success d-flex align-items-center" ><img src="img/volver-flecha.svg"  width="15" height="15" ></a>    
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 d-flex justify-content-star">
+
+                        <a href="#" class="btn btn-primary" id="ocultargastos-fijos" onclick="getdata()">Continuar estudio <img src="img/flecha-ir.svg"  width="15" height="15" ></a>    
+                    </div>
                                   
                 </div>
                 
@@ -179,16 +186,24 @@
                     
                    
                             <div class="container d-flex flex-row-reverse">
-                            <a id="moreproducts"> <img src="plus.png"  width="25" height="25" ></a>
+                            <a id="moreproducts"  class="shadow-lg rounded" data-toggle="tooltip" data-placement="top" title="añadir más productos"> <img src="plus.png"  width="30" height="30" ></a>
                             </div>
                             <div class="container" id="mensajeproducto">
 
                             </div>
                     </div>
-                <div class=" text-muted  pb-2">
-                    <a id="verestadisticas" onclick="product()" class="btn btn-primary">Ver estadisticas</a>    
-
-                </div>
+                    <div class=" text-muted d-flex justify-content-star pb-2">
+                        <div class="col-lg-4 d-flex justify-content-star ">
+    
+                            <a href="#" id="rgastos-fijos" class="btn btn-outline-success d-flex align-items-center" ><img src="img/volver-flecha.svg"  width="15" height="15" ></a>    
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 d-flex justify-content-star">
+    
+                            <a href="#" class="btn btn-primary"  id="verestadisticas" onclick="product()">Continuar estudio <img src="img/flecha-ir.svg"  width="15" height="15" ></a>    
+                        </div>
+                                      
+                    </div>
+                
               </div>
            <!-----------------------------------------End productos------------------------------------------------------------>
            <!--------------------------------------------Estadisticas --------------------------------------------------------->
@@ -217,37 +232,37 @@
                                 <thead class="thead-light">
                                   <tr >
                                     <th scope="col">Producto</th>
-                                    <th scope="col" data-toggle="tooltip" data-placement="top" title="Cantidad para recuperar la inversion">PE</th>
-                                    <th scope="col">costos</th>
-                                    <th scope="col" class="calcular">utilidad</th>                               
+                                    <th scope="col" id="tooltippe" data-toggle="tooltip" data-placement="top" title="tendrás que vender esta cantidad para recuperar la inversion">PE</th>
+                                    <th scope="col" class="calcular" data-toggle="tooltip" data-placement="top" title="Lo que te cuesta hacer tus productos">costos</th>
+                                    <th scope="col" class="calcular" data-toggle="tooltip" data-placement="top" title="Ganancias">utilidad</th>                               
                                   </tr>
                                 </thead>
                                 <tbody>                                                                        
                                   <tr id="product1">
                                     <th id="name1">nombre1</th>
                                     <th id="pe1">punto1</th>
-                                    <td id="cos1">costo1</td>
+                                    <td id="cos1" class="calcular">costo1</td>
                                     <td id="utld1" class="calcular">utilidad1</td>                                    
                             
                                 </tr>
                                 <tr id="product2">
                                     <th id="name2">nombre2</th>
                                     <td id="pe2">punto2</td>
-                                    <td id="cos2">costo2</td>
+                                    <td id="cos2" class="calcular">costo2</td>
                                     <td id="utld2" class="calcular">utilidad2</td>
                                     
                                 </tr>
                                   <tr id="product3">
                                     <td id="name3">nombre3</td>
                                     <td id="pe3">punto3</td>
-                                    <td id="cos3">costo3</td>
+                                    <td id="cos3" class="calcular">costo3</td>
                                     <td id="utld3" class="calcular">utilidad3</td>
                                     
                                   </tr>
                                   <tr id="product4">
                                     <td id="name4">nombre4</td>
                                     <td id="pe4">punto4</td>
-                                    <td id="cos4">costo4</td>
+                                    <td id="cos4" class="calcular">costo4</td>
                                     <td id="utld4" class="calcular">utilidad4</td>                                    
                                   </tr>
                                 </tbody>
@@ -266,6 +281,12 @@
             
                     </div>          
                     
+                    <div class=" text-muted d-flex justify-content-star pb-2">
+                        <div class="col-lg-4 d-flex justify-content-star ">    
+                            <a href="#" id="rproducts" class="btn btn-outline-success d-flex align-items-center" ><img src="img/volver-flecha.svg"  width="15" height="15" ></a>    
+                        </div>                        
+                                      
+                    </div>
                 
             
                 </div>
