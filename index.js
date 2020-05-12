@@ -148,14 +148,34 @@ function product(){
   var vent3 = (Number(pven3)*Number(ventas));                                       //bien
   var vent4 = (Number(pven4)*Number(ventas));
   /******** Calcular utilidad de los productos *************/
-  var utilidad1 = (Number(vent1)-Number(cos1));
-  var utilidad2 = (Number(vent2)-Number(cos2));                                     //bien
-  var utilidad3 = (Number(vent3)-Number(cos3));
-  var utilidad4 = (Number(vent4)-Number(cos4));
+  var utilidad1 = Number(vent1)-Number(cos1);
+  var utilidad2 = Number(vent2)-Number(cos2);                                     //bien
+  var utilidad3 = Number(vent3)-Number(cos3);
+  var utilidad4 = Number(vent4)-Number(cos4);
 
-/***************Calcular totales **********************/
-  
-var totalpe= ((Number(pe1)+Number(pe2)+Number(pe3)+Number(pe4))/4);//total punto de equilibrio
+    if (name2.length === 0) {//si no hay nada todo es igual a 0
+        pe2=0;
+        cos2=0;
+        vent2=0;
+        utilidad2= 0;     
+
+    }
+    if (name3.length === 0) {
+        pe3=0;
+        cos3=0;
+        vent3=0;
+        utilidad3= 0;       
+        
+    }
+    if (name4.length === 0) {            
+        pe4=0;
+        cos4=0;
+        vent4=0;
+        utilidad4= 0;      
+    }
+
+/***************Calcular totales **********************/  
+var totalpe= (Number(pe1)+Number(pe2)+Number(pe3)+Number(pe4)/4);//total punto de equilibrio
 var totalutld = (Number(utilidad1)+Number(utilidad2)+Number(utilidad3)+Number(utilidad4));//total utilidades
 var totalvent = (Number(vent1)+Number(vent2)+Number(vent3)+Number(vent4));//total ventas
 var totalcost = (Number(cos1)+Number(cos2)+Number(cos3)+Number(cos4));//total costos
@@ -193,13 +213,12 @@ if (name4.length != 0) {
 
    
 $('#calcular').click(function(){
+
     $('.calcular').show(123);
-    
-    
     document.getElementById("utld1").innerHTML=utilidad1;//imprime la utilidad
     document.getElementById("utld2").innerHTML=utilidad2;//imprime la utilidad
     document.getElementById("utld3").innerHTML=utilidad3;//imprime la utilidad
-    document.getElementById("totalpe").innerHTML=totalpe;
+    document.getElementById("totalpe").innerHTML=totalpe.toFixed();
     document.getElementById("totalcost").innerHTML=totalcost;
     document.getElementById("totalutl").innerHTML=totalutld;    
 });
