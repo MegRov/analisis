@@ -69,7 +69,7 @@ $(document).ready(function(){
 
     });
 
-    /***********Redireccionamiento cotones regresar *********************/
+    /***********Redireccionamiento botones regresar *********************/
     $('#rsaludo').click(function(){//Cambiar vista de gastos fijos a saludo
 
         $("#gastos-fijos").hide(2000);
@@ -90,10 +90,21 @@ $(document).ready(function(){
         $('#tooltipventas').tooltip('hide');
     });  
            
-
-
-
+    
+    
 });
+function imprim2(){
+     var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+     mywindow.document.write('<html><head>');
+    mywindow.document.write('</head><body >');
+     mywindow.document.write(document.getElementById('estadisticas').innerHTML);
+     mywindow.document.write('</body></html>');
+     mywindow.document.close(); // necesario para IE >= 10
+     mywindow.focus(); // necesario para IE >= 10
+     mywindow.print();
+     mywindow.close();
+     return true;
+    }
 $(function () {//mantiene activos los tooltips
     $('[data-toggle="tooltip"]').tooltip()
     
@@ -253,6 +264,14 @@ $('#calcular').click(function(){
     });
 });
 
-}
+
+
+
+//imprimir la pagina
+
+}  
+
+
+
 
 
