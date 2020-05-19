@@ -107,7 +107,7 @@ function workname(){//Guarda el nombre en variable
 
 
 
-function getdata(){ //obtiene los datos de los gastos y los suma
+function getdata(){ //obtiene los datos de los gastos fijos y los suma
     
     var inputgastos1 = document.getElementById("inputgasto1").value;
     var inputgastos2 = document.getElementById("inputgasto2").value;
@@ -208,6 +208,7 @@ var totalcost = (Number(cos1)+Number(cos2)+Number(cos3)+Number(cos4));//total co
 
    
    /***************Validacion inputs productos y musetra en la tabla********************/
+   document.getElementById("recordar").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(resultgastos));//imprime gastos fijos arriendo,nomina etc..
    document.getElementById("name1").innerHTML= name1;//imprime nombre1  en la tabla 
    document.getElementById("pe1").innerHTML=pe1.toFixed();//imprime punto equilibrio 1 en la tabla
    document.getElementById("cos1").innerHTML=cos1.toFixed();//imprime costos 1 en la tabla

@@ -41,7 +41,7 @@
                   </div>        
                 <div class="card-body">
                   <h5 class="card-title">Intoduce tus gastos fijos</h5>
-                  <p class="card-text">Son los que no cambian, ejemplo: arriendo, nómina, servicios públicos...</p>
+                  <p class="card-text">Ejemplo: arriendo, nómina, servicios públicos...</p>
                     <div class="input-group mb-3 shadow-lg" id="inputgastos1">
                             <div class="input-group-prepend">                                                        
                                 <span class="input-group-text" id="tooltip" data-toggle="tooltip" data-placement="bottom" title="Escribir solo numeros sin puntos ni espacios"><img src="finanzas.png"  width="20" height="20" ></span>                            
@@ -214,15 +214,24 @@
                     <img src="https://milasoft.co/wp-content/uploads/2020/01/icono-2.png" width="40" height="40" alt=""> 
                 </div>        
                 <div class="card-body">
-                    <h5 class="card-title">Gracias <strong id="work-name"></strong> por confiar en Milasoft</h5>                    
+                    <h5 class="card-title">Gracias <strong id="work-name"></strong> por confiar en Milasoft</h5>  
+                    <div class="container">
+                        <h6>Recuerda</h6>
+                        <p id="recordargf">Gastos que tienes que cubrir son un total de:<strong id="recordar" class="alert alert-success"  data-toggle="tooltip" data-placement="top" title="Tienes que vender más que eso para obtener ganancias">$0</strong></p>
+                       
+                    </div>                  
                         <div class="container">                      
                             <div class="input-group mb-3 shadow-lg"><!--input cantidad ventas-->
                                 <div class="input-group-prepend">                                                        
-                                       <span class="input-group-text" id="tooltipventas" data-toggle="tooltip" data-placement="top" title="Introduce para ver las ganancias"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                                       <span class="input-group-text" id="tooltipventas" data-toggle="tooltip" data-placement="top" title="Introduce para ver las ganancias"><img src="img/count.png"  width="20" height="20" ></span>                            
                                </div>
                                    <input type="text" class="form-control" placeholder="Cuantos productos te gustaría vender" id="ventas" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
                                    <a type="button" class="btn btn-success" id="calcular" onclick="product()"> calcular</a>
                            </div> 
+                           
+                        <div class="container d-flex flex-row-reverse">
+                            <a id="moreproducts"  class="shadow-lg rounded" data-toggle="tooltip" data-placement="top" title="añadir más productos"> <img src="plus.png"  width="30" height="30" ></a>
+                        </div>
                    
 
                             <table class="table table-striped rounded">
@@ -255,14 +264,14 @@
                                   <tr id="product3">
                                     <td id="name3">nombre3</td>
                                     <td id="pe3">punto3</td>
-                                    <td id="cos3" class="calcular">costo3</td>
+                                    <td id="cos3"></td> <a class="calcular">costo3</a> </td>
                                     <td id="utld3" class="calcular">utilidad3</td>
                                     
                                   </tr>
                                   <tr id="product4">
                                     <td id="name4">nombre4</td>
                                     <td id="pe4">punto4</td>
-                                    <td id="cos4" class="calcular">costo4</td>
+                                    <td id="cos4">$ <a class="calcular">costo4</a>  </td>
                                     <td id="utld4" class="calcular">utilidad4</td>                                    
                                   </tr>
                                 </tbody>
