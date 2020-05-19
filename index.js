@@ -208,30 +208,30 @@ var totalcost = (Number(cos1)+Number(cos2)+Number(cos3)+Number(cos4));//total co
 
    
    /***************Validacion inputs productos y musetra en la tabla********************/
-   document.getElementById("recordar").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(resultgastos));//imprime gastos fijos arriendo,nomina etc..
+   document.getElementById("recordar").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(resultgastos.toFixed()));//imprime gastos fijos arriendo,nomina etc..
    document.getElementById("name1").innerHTML= name1;//imprime nombre1  en la tabla 
    document.getElementById("pe1").innerHTML=pe1.toFixed();//imprime punto equilibrio 1 en la tabla
-   document.getElementById("cos1").innerHTML=cos1.toFixed();//imprime costos 1 en la tabla
+   document.getElementById("cos1").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(cos1.toFixed()));//imprime costos 1 en la tabla
    
    
    if (name2.length != 0) {//si esta vacio el input 2 lo oculta en la tabla, igual los que le siguen
     $('#product2').show(1);
     document.getElementById("name2").innerHTML= name2;//nombre2
     document.getElementById("pe2").innerHTML=pe2.toFixed();//imprime punto equilibrio 2
-    document.getElementById("cos2").innerHTML=cos2;//imprime costos 2
+    document.getElementById("cos2").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(cos2));//imprime costos 2
     
 }
 if (name3.length != 0) {
     $('#product3').show(1);
     document.getElementById("name3").innerHTML= name3;//nombre3
     document.getElementById("pe3").innerHTML=pe3.toFixed();//imprime punto equilibrio 3
-    document.getElementById("cos3").innerHTML=cos3;//imprime costos 3
+    document.getElementById("cos3").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(cos3));//imprime costos 3
 }
 if (name4.length != 0) {
     $('#product4').show(1);
     document.getElementById("name4").innerHTML= name4;//nombre 4
     document.getElementById("pe4").innerHTML=pe4.toFixed();//imprime punto equilibrio 4
-    document.getElementById("cos4").innerHTML=cos4;//imprime costos 4
+    document.getElementById("cos4").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(cos4));//imprime costos 4
     document.getElementById("utld4").innerHTML=utilidad4;//imprime la utilidad
 }
   
@@ -240,12 +240,12 @@ if (name4.length != 0) {
 $('#calcular').click(function(){
     $('#tooltipventas').tooltip('hide');
     $('.calcular').show(123);
-    document.getElementById("utld1").innerHTML=utilidad1;//imprime la utilidad
-    document.getElementById("utld2").innerHTML=utilidad2;//imprime la utilidad
-    document.getElementById("utld3").innerHTML=utilidad3;//imprime la utilidad
-    document.getElementById("totalpe").innerHTML=totalpe.toFixed();
-    document.getElementById("totalcost").innerHTML=totalcost;
-    document.getElementById("totalutl").innerHTML=totalutld;   
+    document.getElementById("utld1").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(utilidad1));//imprime la utilidad
+    document.getElementById("utld2").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(utilidad2));//imprime la utilidad
+    document.getElementById("utld3").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(utilidad3));//imprime la utilidad
+    document.getElementById("totalpe").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(totalpe.toFixed()));
+    document.getElementById("totalcost").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(totalcost));
+    document.getElementById("totalutl").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(totalutld));   
         $('#calcular').click(function(){
             $('#tooltippe').tooltip('show');
 
