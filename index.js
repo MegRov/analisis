@@ -160,13 +160,13 @@ function product(){
 
     /******************Imprime los gastos ********************** */
 document.getElementById("inputnomgastos1").innerHTML= inputnomgasto1;//imprime nombre1 gastos fijos
-document.getElementById("gastos1").innerHTML= inputgasto1;//imprime valor2 gastos fijos 
+document.getElementById("gastos1").innerHTML= inputgastos1;//imprime valor2 gastos fijos 
 document.getElementById("inputnomgastos2").innerHTML=inputnomgasto2;//imprime gastos fijos arriendo,nomina etc..
-document.getElementById("gastos2").innerHTML=inputgasto2;//imprime gastos fijos arriendo,nomina etc..
+document.getElementById("gastos2").innerHTML=inputgastos2;//imprime gastos fijos arriendo,nomina etc..
 document.getElementById("inputnomgastos3").innerHTML=inputnomgasto3;//imprime gastos fijos arriendo,nomina etc..
-document.getElementById("gastos3").innerHTML=inputgasto3;//imprime gastos fijos arriendo,nomina etc..
+document.getElementById("gastos3").innerHTML=inputgastos3;//imprime gastos fijos arriendo,nomina etc..
 document.getElementById("inputnomgastos4").innerHTML=inputnomgasto4;//imprime gastos fijos arriendo,nomina etc..
-document.getElementById("gastos4").innerHTML=inputgasto4; //imprime gastos fijos arriendo,nomina etc..
+document.getElementById("gastos4").innerHTML=inputgastos4; //imprime gastos fijos arriendo,nomina etc..
 
 
     if (name2.length === 0) {//si no hay nada todo es igual a 0
@@ -245,6 +245,7 @@ var totalcost = (Number(cos1)+Number(cos2)+Number(cos3)+Number(cos4));//total co
 
    
    /***************Validacion inputs productos y musetra en la tabla********************/
+   document.getElementById("recordar").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(resultgastos)) ;//imprime nombre1  en la tabla 
    document.getElementById("name1").innerHTML= name1;//imprime nombre1  en la tabla 
    document.getElementById("pe1").innerHTML=pe1.toFixed();//imprime punto equilibrio 1 en la tabla
    document.getElementById("cos1").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(cos1.toFixed()));//imprime costos 1 en la tabla
