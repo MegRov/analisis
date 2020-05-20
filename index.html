@@ -24,7 +24,7 @@
             <p class="card-text">Software creado para que hagas las cuentas de tu negocio</p>            
                 <div class="input-group-prepend d-flex flex-row">                                                        
                     <!-- <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>  -->
-                    <input type="text" class="form-control w-100 " id="workname" placeholder="Escribe el nombre de tu empresa para comenzar" aria-label="Dollar amount (with dot and two decimal places)"  >
+                    <input type="text" class="form-control w-100 " id="workname" placeholder="Escribe el nombre de tu empresa para comenzar" aria-label="Dollar amount"  >
                 </div>
         </div> 
     <a href="#" class="btn btn-degrade" id="ocultarsaludo" onclick="workname()">Hacer estudio</a> 
@@ -42,30 +42,54 @@
                 <div class="card-body">
                   <h5 class="card-title">Intoduce tus gastos fijos</h5>
                   <p class="card-text">Ejemplo: arriendo, nómina, servicios públicos...</p>
-                    <div class="input-group mb-3 shadow-lg" id="inputgastos1">
-                            <div class="input-group-prepend">                                                        
-                                <span class="input-group-text" id="tooltip" data-toggle="tooltip" data-placement="bottom" title="Escribir solo numeros sin puntos ni espacios"><img src="finanzas.png"  width="20" height="20" ></span>                            
-                            </div>
-                            <input type="text" class="form-control" placeholder="Ejemplo: nómina" id="inputgasto1" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
-                     </div>
-                    <div class="input-group mb-3 shadow-lg " id="inputgastos2">
-                            <div class="input-group-prepend d-flex flex-row">                                                        
+                    
+
+                     <div id="inputgastos1">
+                         <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                       
+                            <span class="input-group-text"><img src="img/product.svg"  width="20" height="20" ></span>                            
+                            <input type="text" class="form-control text-center" placeholder="Ejemplo: nómina" id="inputgasto1" aria-label="Dollar amount" autofocus>
+                       </div>  
+                       
+                       <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                
+                            <span class="input-group-text" id="tooltip" data-toggle="tooltip" data-placement="bottom" title="Escribir solo numeros sin puntos ni espacios"><img src="finanzas.png"  width="20" height="20" ></span>                            
+                            <input type="number" class="form-control" placeholder="Ejemplo: 500000" id="inputgasto1" aria-label="Dollar amount" autofocus>
+                        </div>   
+                    </div>
+                     
+                     <div id="inputgastos2"><!------Input gastos 2--------->
+                         <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                       
+                                 <span class="input-group-text"><img src="img/product.svg"  width="20" height="20" ></span>                            
+                                 <input type="text" class="form-control w-100 text-center "  placeholder="Ejemplo: arriendo" id="inputgasto2" aria-label="Dollar amount )"  >
+                                                    
+                            </div>  
+                            <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
-                                <input type="text" class="form-control w-100 "  placeholder="Ejemplo: arriendo" id="inputgasto2" aria-label="Dollar amount (with dot and two decimal places)"  >
-                            </div>
-                     </div>                    
-                    <div class="input-group mb-3 shadow-lg  " id="inputgastos3">
-                            <div class="input-group-prepend d-flex flex-row">                                                        
+                                <input type="number" class="form-control w-100 "  placeholder="Ejemplo: 800000" id="inputgasto2" aria-label="Dollar amount"  >
+                            </div>   
+                    </div>                   
+                     <div id="inputgastos3"><!------Input gastos 3--------->
+                         <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                       
+                            <span class="input-group-text"><img src="img/product.svg"  width="20" height="20" ></span>                            
+                            <input type="text" class="form-control  w-100 text-center" placeholder="Ejemplo: servicios "  id="inputgasto3" aria-label="Dollar amount"  >
+                        </div>  
+                            <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
-                                <input type="text" class="form-control  w-100" placeholder="Ejemplo: nomina  "  id="inputgasto3" aria-label="Dollar amount (with dot and two decimal places)"  >
-                            </div>
-                     </div>                    
-                   
-                    <div class="input-group mb-3 shadow-lg " id="inputgastos4">
-                            <div class="input-group-prepend d-flex flex-row">                                                        
+                                <input type="number" class="form-control  w-100" placeholder="Ejemplo: 800000  "  id="inputgasto3" aria-label="Dollar amount"  >
+                             </div>   
+                    </div>                  
+                     <div id="inputgastos4"><!------Input gastos 4--------->
+                         <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                       
+                            <span class="input-group-text"><img src="img/product.svg"  width="20" height="20" ></span>                            
+                                <input type="text" class="form-control w-100 text-center" placeholder="otros" id="inputgasto4" aria-label="Dollar amount"  >
+                         </div>  
+                            <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
-                                <input type="text" class="form-control w-100 " placeholder="otros" id="inputgasto4" aria-label="Dollar amount (with dot and two decimal places)"  >
-                            </div>
+                                <input type="number" class="form-control w-100 " placeholder="1000000" id="inputgasto4" aria-label="Dollar amount"  >
+                             </div>   
+                    </div>                  
+                     <div class="input-group mb-3 shadow-lg " id="inputgastos4">
+                            <div class="input-group-prepend d-flex flex-row">                                                        
+                                </div>
                      </div>
                     
                    
@@ -103,19 +127,20 @@
                           <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="product.svg"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control"  id="productname1" placeholder="Nombre del producto" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
-                     </div>
+                            <input type="text" class="form-control"  id="productname1" placeholder="Nombre del producto" aria-label="Dollar amount" autofocus>
+                     
+                        </div>
                      <div class="input-group mb-3 shadow-lg"><!--input precio unitario-->
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="precio unitario "  id="preciou1" aria-label="Dollar amount (with dot and two decimal places)" >
+                            <input type="text" class="form-control" placeholder="precio unitario "  id="preciou1" aria-label="Dollar amount" >
                         </div>
                      <div class="input-group mb-3 shadow-lg"><!--input precio venta-->
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img  src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="precio venta" id="preciov1" aria-label="Dollar amount (with dot and two decimal places)" >
+                            <input type="text" class="form-control" placeholder="precio venta" id="preciov1" aria-label="Dollar amount" >
                         </div>                   
                 </div>
 
@@ -124,19 +149,19 @@
                           <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="product.svg"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control"  id="productname2" placeholder="producto 2" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                            <input type="text" class="form-control"  id="productname2" placeholder="producto 2" aria-label="Dollar amount" autofocus>
                      </div>
                      <div class="input-group mb-3 shadow-lg"><!--input precio unitario-->
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="precio unitario " id="preciou2" aria-label="Dollar amount (with dot and two decimal places)" >
+                            <input type="text" class="form-control" placeholder="precio unitario " id="preciou2" aria-label="Dollar amount" >
                     </div>
                      <div class="input-group mb-3 shadow-lg"><!--input precio venta-->
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                     </div>
-                            <input type="text" class="form-control" placeholder="precio venta" id="preciov2" aria-label="Dollar amount (with dot and two decimal places)" >
+                            <input type="text" class="form-control" placeholder="precio venta" id="preciov2" aria-label="Dollar amount" >
                     </div>
                     
                 </div>
@@ -147,19 +172,19 @@
                            <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="product.svg"  width="20" height="20" ></span>                            
                       </div>
-                            <input type="text" class="form-control"  id="productname3" placeholder="producto 3" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                            <input type="text" class="form-control"  id="productname3" placeholder="producto 3" aria-label="Dollar amount" autofocus>
                      </div>
                         <div class="input-group mb-3 shadow-lg"><!--input precio unitario-->
                             <div class="input-group-prepend">                                                        
                                     <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                                 </div>
-                                <input type="text" class="form-control" placeholder="precio unitario" id="preciou3" aria-label="Dollar amount (with dot and two decimal places)" >
+                                <input type="text" class="form-control" placeholder="precio unitario" id="preciou3" aria-label="Dollar amount" >
                         </div>
                         <div class="input-group mb-3 shadow-lg"><!--input precio venta-->
                             <div class="input-group-prepend">                                                        
                                    <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                            </div>
-                               <input type="text" class="form-control" placeholder="precio venta" id="preciov3" aria-label="Dollar amount (with dot and two decimal places)" >
+                               <input type="text" class="form-control" placeholder="precio venta" id="preciov3" aria-label="Dollar amount" >
                        </div>
                 </div>
 
@@ -168,19 +193,19 @@
                           <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="product.svg"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control"  id="productname4" placeholder="producto 4" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                            <input type="text" class="form-control"  id="productname4" placeholder="producto 4" aria-label="Dollar amount" autofocus>
                      </div>
                      <div class="input-group mb-3 shadow-lg"><!--input precio unitario-->
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="precio unitario" id="preciou4" aria-label="Dollar amount (with dot and two decimal places)" >
+                            <input type="text" class="form-control" placeholder="precio unitario" id="preciou4" aria-label="Dollar amount" >
                         </div>
                         <div class="input-group mb-3 shadow-lg"><!--input precio venta-->
                             <div class="input-group-prepend">                                                        
                                    <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                            </div>
-                               <input type="text" class="form-control" value="" placeholder="precio de venta" id="preciov4" aria-label="Dollar amount (with dot and two decimal places)" >
+                               <input type="text" class="form-control" value="" placeholder="precio de venta" id="preciov4" aria-label="Dollar amount" >
                        </div> 
                 </div>
                     
@@ -223,11 +248,11 @@
                         <div class="container">                      
                             <div class="input-group mb-3 shadow-lg"><!--input cantidad ventas-->
                                 <div class="input-group-prepend">    
-                                
-                                                                                    
+
+
                                        <span class="input-group-text" id="tooltipventas" data-toggle="tooltip" data-placement="top" title="Introduce para ver las ganancias"><img src="img/count.png"  width="20" height="20" ></span>                            
                                </div>
-                                   <input type="text" class="form-control" placeholder="Cuantos productos te gustaría vender" id="ventas" aria-label="Dollar amount (with dot and two decimal places)" autofocus>
+                                   <input type="text" class="form-control" placeholder="Cuantos productos te gustaría vender" id="ventas" aria-label="Dollar amount" autofocus>
                                    <a type="button" class="btn btn-success" id="calcular" onclick="product()"> calcular</a>
                            </div> 
                            
