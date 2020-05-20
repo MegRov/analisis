@@ -47,8 +47,8 @@
                      <div id="inputgastos1">
                          <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                       
                             <span class="input-group-text"><img src="img/product.svg"  width="20" height="20" ></span>                            
-                            <input type="text" class="form-control text-center" placeholder="Ejemplo: nómina" id="inputgasto1"  aria-label="Dollar amount" autofocus>
-                       </div>  
+                            <input type="text" class="form-control text-center" placeholder="Ejemplo: nómina" id="inputnomgasto1"  aria-label="Dollar amount" autofocus>
+                        </div>  
                        
                        <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                
                             <span class="input-group-text" id="tooltip" data-toggle="tooltip" data-placement="bottom" title="Escribir solo numeros sin puntos ni espacios"><img src="finanzas.png"  width="20" height="20" ></span>                            
@@ -59,7 +59,7 @@
                      <div id="inputgastos2"><!------Input gastos 2--------->
                          <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                       
                                  <span class="input-group-text"><img src="img/product.svg"  width="20" height="20" ></span>                            
-                                 <input type="text" class="form-control w-100 text-center "  placeholder="Ejemplo: arriendo" id="inputgasto2" aria-label="Dollar amount )"  >
+                                 <input type="text" class="form-control w-100 text-center "  placeholder="Ejemplo: arriendo" id="inputnomgasto2" aria-label="Dollar amount )"  >
                                                     
                             </div>  
                             <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                
@@ -70,7 +70,7 @@
                      <div id="inputgastos3"><!------Input gastos 3--------->
                          <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                       
                             <span class="input-group-text"><img src="img/product.svg"  width="20" height="20" ></span>                            
-                            <input type="text" class="form-control  w-100 text-center" placeholder="Ejemplo: servicios "  id="inputgasto3" aria-label="Dollar amount"  >
+                            <input type="text" class="form-control  w-100 text-center" placeholder="Ejemplo: servicios "  id="inputnomgasto3" aria-label="Dollar amount"  >
                         </div>  
                             <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
@@ -80,7 +80,7 @@
                      <div id="inputgastos4"><!------Input gastos 4--------->
                          <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                       
                             <span class="input-group-text"><img src="img/product.svg"  width="20" height="20" ></span>                            
-                                <input type="text" class="form-control w-100 text-center" placeholder="otros" id="inputgasto4" aria-label="Dollar amount"  >
+                                <input type="text" class="form-control w-100 text-center" placeholder="otros" id="inputnomgasto4" aria-label="Dollar amount"  >
                          </div>  
                             <div class="input-group mb-3 shadow-lg d-flex flex-row" >                                                
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
@@ -134,13 +134,13 @@
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="precio unitario "  id="preciou1" aria-label="Dollar amount" >
+                            <input type="number" class="form-control" placeholder="precio unitario "  id="preciou1" aria-label="Dollar amount"   onkeypress='return validaNumericos(event)'>
                         </div>
                      <div class="input-group mb-3 shadow-lg"><!--input precio venta-->
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img  src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="precio venta" id="preciov1" aria-label="Dollar amount" >
+                            <input type="number" class="form-control" placeholder="precio venta" id="preciov1" aria-label="Dollar amount"  onkeypress='return validaNumericos(event)' >
                         </div>                   
                 </div>
 
@@ -155,13 +155,13 @@
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="precio unitario " id="preciou2" aria-label="Dollar amount" >
+                            <input type="number" class="form-control" placeholder="precio unitario " id="preciou2" aria-label="Dollar amount"   onkeypress='return validaNumericos(event)'>
                     </div>
                      <div class="input-group mb-3 shadow-lg"><!--input precio venta-->
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                     </div>
-                            <input type="text" class="form-control" placeholder="precio venta" id="preciov2" aria-label="Dollar amount" >
+                            <input type="number" class="form-control" placeholder="precio venta" id="preciov2" aria-label="Dollar amount"   onkeypress='return validaNumericos(event)'>
                     </div>
                     
                 </div>
@@ -178,13 +178,13 @@
                             <div class="input-group-prepend">                                                        
                                     <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                                 </div>
-                                <input type="text" class="form-control" placeholder="precio unitario" id="preciou3" aria-label="Dollar amount" >
+                                <input type="number" class="form-control" placeholder="precio unitario" id="preciou3" aria-label="Dollar amount"  onkeypress='return validaNumericos(event)'>
                         </div>
                         <div class="input-group mb-3 shadow-lg"><!--input precio venta-->
                             <div class="input-group-prepend">                                                        
                                    <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                            </div>
-                               <input type="text" class="form-control" placeholder="precio venta" id="preciov3" aria-label="Dollar amount" >
+                               <input type="number" class="form-control" placeholder="precio venta" id="preciov3" aria-label="Dollar amount"  onkeypress='return validaNumericos(event)'>
                        </div>
                 </div>
 
@@ -199,13 +199,13 @@
                          <div class="input-group-prepend">                                                        
                                 <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                             </div>
-                            <input type="text" class="form-control" placeholder="precio unitario" id="preciou4" aria-label="Dollar amount" >
+                            <input type="number" class="form-control" placeholder="precio unitario" id="preciou4" aria-label="Dollar amount"  onkeypress='return validaNumericos(event)'>
                         </div>
                         <div class="input-group mb-3 shadow-lg"><!--input precio venta-->
                             <div class="input-group-prepend">                                                        
                                    <span class="input-group-text"><img src="finanzas.png"  width="20" height="20" ></span>                            
                            </div>
-                               <input type="text" class="form-control" value="" placeholder="precio de venta" id="preciov4" aria-label="Dollar amount" >
+                               <input type="number" class="form-control" value="" placeholder="precio de venta" id="preciov4" aria-label="Dollar amount"  onkeypress='return validaNumericos(event)'>
                        </div> 
                 </div>
                     
@@ -241,8 +241,25 @@
                 <div class="card-body">
                     <h5 class="card-title">Gracias <strong id="work-name"></strong> por confiar en Milasoft</h5>  
                     <div class="container">
-                        <h6>Recuerda</h6>
-                        <p id="recordargf">Gastos que tienes que cubrir son un total de:<strong id="recordar" class="alert alert-success"  data-toggle="tooltip" data-placement="top" title="Tienes que vender más que eso para obtener ganancias">$0</strong></p>
+                        <div  class="d-flex justify-content-start">
+                            <h6 id="inputnomgastos1"></h6>
+                            <h6 id="gastos1"></h6>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <h6 id="inputnomgastos2"></h6>
+                            <h6 id="gastos2"></h6>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <h6 id="inputnomgastos3"></h6>
+                            <h6 id="gastos3"></h6>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <h6 id="inputnomgastos4"></h6>
+                            <h6 id="gastos4"></h6>
+                        </div>
+                        <p>Gastos que tienes que cubrir son un total de:<strong id="recordar" class="alert alert-success"  data-toggle="tooltip" data-placement="top" title="Tienes que vender más que eso para obtener ganancias">$0</strong></p>
+                        <p>Tienes que vender más de:<strong id="totalpe">0</strong> productos para obtener ganancias</p>
+
                        
                     </div>                  
                         <div class="container">                      
@@ -252,7 +269,7 @@
 
                                        <span class="input-group-text" id="tooltipventas" data-toggle="tooltip" data-placement="top" title="Introduce para ver las ganancias"><img src="img/count.png"  width="20" height="20" ></span>                            
                                </div>
-                                   <input type="text" class="form-control" placeholder="Cuantos productos te gustaría vender" id="ventas" aria-label="Dollar amount" autofocus>
+                                   <input type="number" class="form-control" placeholder="Cuantos productos te gustaría vender" id="ventas" aria-label="Dollar amount" autofocus  onkeypress='return validaNumericos(event)'>
                                    <a type="button" class="btn btn-success" id="calcular" onclick="product()"> calcular</a>
                            </div> 
                            

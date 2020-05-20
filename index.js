@@ -97,10 +97,10 @@ function validaNumericos(event) { //Funcion para validar que los inputs numerico
     if(event.charCode >= 48 && event.charCode <= 57){
       return true;
      }
-     return false;        
-                    
+     return false;                          
 }
-function imprim2(){
+
+function imprim2(){//Funcion imprimir factura
      var mywindow = window.open('', 'PRINT', 'height=400,width=600');
      mywindow.document.write('<html><head>');
     mywindow.document.write('</head><body >');
@@ -112,6 +112,7 @@ function imprim2(){
      mywindow.close();
      return true;
     }
+    
 $(function () {//mantiene activos los tooltips
     $('[data-toggle="tooltip"]').tooltip()
     
@@ -127,14 +128,19 @@ function workname(){//Guarda el nombre en variable
 
 function getdata(){ //obtiene los datos de los gastos fijos y los suma
     
-    var inputgastos1 = document.getElementById("inputgasto1").value;
-    var inputgastos2 = document.getElementById("inputgasto2").value;
-    var inputgastos3 = document.getElementById("inputgasto3").value;
-    var inputgastos4 = document.getElementById("inputgasto4").value;
-    resultgastos = (Number(inputgastos1)+Number (inputgastos2)+Number (inputgastos3)+Number (inputgastos4));
+     inputgastos1 = document.getElementById("inputgasto1").value;
+     inputgastos2 = document.getElementById("inputgasto2").value;
+     inputgastos3 = document.getElementById("inputgasto3").value;
+     inputgastos4 = document.getElementById("inputgasto4").value;
+     inputnomgasto1 = document.getElementById("inputnomgasto1").value;
+     inputnomgasto2 = document.getElementById("inputnomgasto2").value;
+     inputnomgasto3 = document.getElementById("inputnomgasto3").value;
+     inputnomgasto4 = document.getElementById("inputnomgasto4").value;   
+    
+    
+
 
 }
-
 function product(){
     /*********Almacenar en variable lo que viene del input**************/    
     var name1 = document.getElementById("productname1").value;//nombre product1
@@ -148,8 +154,20 @@ function product(){
     var pven3 = document.getElementById("preciov3").value;//precio venta
     var name4 = document.getElementById("productname4").value;//nombre product4
     var pund4 = document.getElementById("preciou4").value;//precio und
-    var pven4 = document.getElementById("preciov4").value;//precio venta
+    var pven4 = document.getElementById("preciov4").value;//precio venta 
+   
     ventas = document.getElementById("ventas").value;//cantidad de ventas
+
+    /******************Imprime los gastos ********************** */
+document.getElementById("inputnomgastos1").innerHTML= inputnomgasto1;//imprime nombre1 gastos fijos
+document.getElementById("gastos1").innerHTML= inputgasto1;//imprime valor2 gastos fijos 
+document.getElementById("inputnomgastos2").innerHTML=inputnomgasto2;//imprime gastos fijos arriendo,nomina etc..
+document.getElementById("gastos2").innerHTML=inputgasto2;//imprime gastos fijos arriendo,nomina etc..
+document.getElementById("inputnomgastos3").innerHTML=inputnomgasto3;//imprime gastos fijos arriendo,nomina etc..
+document.getElementById("gastos3").innerHTML=inputgasto3;//imprime gastos fijos arriendo,nomina etc..
+document.getElementById("inputnomgastos4").innerHTML=inputnomgasto4;//imprime gastos fijos arriendo,nomina etc..
+document.getElementById("gastos4").innerHTML=inputgasto4; //imprime gastos fijos arriendo,nomina etc..
+
 
     if (name2.length === 0) {//si no hay nada todo es igual a 0
         pven2=0;
@@ -173,6 +191,8 @@ function product(){
 
  
    /******** Calcular punto de equilibrio *************/
+   
+  resultgastos = (Number(inputgastos1)+Number (inputgastos2)+Number (inputgastos3)+Number (inputgastos4));
   var pe1 = (Number (resultgastos) /(Number(pven1)-Number(pund1)));
   var pe2 = (Number (resultgastos) /(Number(pven2)-Number(pund2)));               //bien
   var pe3 = (Number (resultgastos) /(Number(pven3)-Number(pund3)));
@@ -222,11 +242,9 @@ var totalutld = (Number(utilidad1)+Number(utilidad2)+Number(utilidad3)+Number(ut
 var totalvent = (Number(vent1)+Number(vent2)+Number(vent3)+Number(vent4));//total ventas
 var totalcost = (Number(cos1)+Number(cos2)+Number(cos3)+Number(cos4));//total costos
 
-   
 
    
    /***************Validacion inputs productos y musetra en la tabla********************/
-   document.getElementById("recordar").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(resultgastos.toFixed()));//imprime gastos fijos arriendo,nomina etc..
    document.getElementById("name1").innerHTML= name1;//imprime nombre1  en la tabla 
    document.getElementById("pe1").innerHTML=pe1.toFixed();//imprime punto equilibrio 1 en la tabla
    document.getElementById("cos1").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(cos1.toFixed()));//imprime costos 1 en la tabla
@@ -254,6 +272,7 @@ if (name4.length != 0) {
 }
   
 
+document.getElementById("totalpe").innerHTML=totalpe.toFixed();
    
 $('#calcular').click(function(){
     $('#tooltipventas').tooltip('hide');
@@ -261,7 +280,6 @@ $('#calcular').click(function(){
     document.getElementById("utld1").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(utilidad1));//imprime la utilidad
     document.getElementById("utld2").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(utilidad2));//imprime la utilidad
     document.getElementById("utld3").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(utilidad3));//imprime la utilidad
-    document.getElementById("totalpe").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(totalpe.toFixed()));
     document.getElementById("totalcost").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(totalcost));
     document.getElementById("totalutl").innerHTML=(new Intl.NumberFormat('en-CA', {style:'currency', currency: 'CAD', useGrouping:true }).format(totalutld));   
         $('#calcular').click(function(){
@@ -272,13 +290,6 @@ $('#calcular').click(function(){
 });
 
 
-
-
-//imprimir la pagina
-
 }  
-
-
-
 
 
