@@ -92,6 +92,14 @@ $(document).ready(function(){
     
     
 });
+
+function validaNumericos(event) { //Funcion para validar que los inputs numericos acepten solo numeros
+    if(event.charCode >= 48 && event.charCode <= 57){
+      return true;
+     }
+     return false;        
+    
+}
 function imprim2(){
      var mywindow = window.open('', 'PRINT', 'height=400,width=600');
      mywindow.document.write('<html><head>');

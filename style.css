@@ -19,12 +19,13 @@ body{
     background: linear-gradient(159deg, rgba(120,218,95,1) 0%, rgb(94, 163, 82) 100%);
  }
 
-    input[type=number]::-webkit-inner-spin-button, 
-    input[type=number]::-webkit-outer-spin-button {
-        
-        -webkit-appearance: none; 
-        margin: 0; 
-    } 
+ input[type=number]::-webkit-inner-spin-button, 
+ input[type=number]::-webkit-outer-spin-button { 
+   -webkit-appearance: none; 
+   margin: 0; 
+ }
+ 
+ input[type=number] { -moz-appearance:textfield; }
     
 
 /*******ocultar las ventanas******/
