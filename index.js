@@ -88,8 +88,7 @@ $(document).ready(function(){
         $("#productos").show(2000);
         $("#estadisticas").hide(2000);
         $('#tooltipventas').tooltip('hide');
-    });  
-           
+    });  g
     
     
 });
