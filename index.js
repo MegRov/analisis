@@ -98,7 +98,7 @@ function validaNumericos(event) { //Funcion para validar que los inputs numerico
       return true;
      }
      return false;        
-    
+                    
 }
 function imprim2(){
      var mywindow = window.open('', 'PRINT', 'height=400,width=600');
